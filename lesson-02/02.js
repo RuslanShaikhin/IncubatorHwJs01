@@ -8,8 +8,19 @@
 */
 
 let dice1 // your code
+dice1 = Math.floor(Math.random() * 6) + 1;
+
 let dice2 // your code
+dice2 = Math.floor(Math.random() * 6) + 1;
+
 let isWinningDouble // your code
+isWinningDouble = false;
+
+if (dice1 === dice2) {
+  if(dice1>3) {
+    isWinningDouble = true;
+  }
+}
 
 /*
 console.log('Первый бросок: ' + dice1)
