@@ -19,6 +19,8 @@ let isAccess
     if (isAdmin===true || isVerifiedUser===true) {
         if (hasSpecialPermission === true || hasTemporaryPass===true) {
             isAccess = true;
+        } else {
+            isAccess = false;
         }
     } else {
         isAccess = false;
