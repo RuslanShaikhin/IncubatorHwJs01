@@ -20,5 +20,7 @@ let isAccess
         if (hasSpecialPermission === true || hasTemporaryPass===true) {
             isAccess = true;
         }
+    } else {
+        isAccess = false;
     }
 
