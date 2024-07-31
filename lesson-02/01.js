@@ -18,10 +18,10 @@ let isAccess
 // your code
 isAccess = false;
 
-while (isAccess === false) {
+
     if (isAdmin===true || isVerifiedUser===true) {
         if (hasSpecialPermission === true || hasTemporaryPass===true) {
             isAccess = true;
         }
     }
-}
+
