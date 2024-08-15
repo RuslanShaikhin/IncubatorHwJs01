@@ -19,8 +19,8 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 
 function findCommonElements(arrayFirst, arraySecond) {
     const resultArray = [];
-    for (let i = 0; i < arrayFirst.length; i++) {
-        if(includesElement(arrayFirst, arraySecond[i])){
+    for (let i = 0; i < arraySecond.length; i++) {
+        if(includesElement(arrayFirst, arraySecond[i])===true){
             resultArray.push(arraySecond[i]);
         }
     }
