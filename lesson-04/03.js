@@ -17,4 +17,12 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findCommonElements() {}
+function findCommonElements(arrayFirst, arraySecond) {
+    const resultArray = [];
+    for (let i = 0; i < arrayFirst.length; i++) {
+        if(includesElement(arrayFirst, arraySecond[i])){
+            resultArray.push(arraySecond[i]);
+        }
+    }
+    return resultArray;
+}
