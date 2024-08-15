@@ -21,7 +21,9 @@ function findCommonElements(arrayFirst, arraySecond) {
     const resultArray = [];
     for (let i = 0; i < arraySecond.length; i++) {
         if(includesElement(arrayFirst, arraySecond[i])){
-            resultArray.push(arraySecond[i]);
+            if (includesElement(resultArray, arraySecond[i])===false) {
+                resultArray.push(arraySecond[i]);
+            }
         }
     }
     return resultArray;
