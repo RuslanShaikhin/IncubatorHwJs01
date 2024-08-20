@@ -36,10 +36,6 @@ const gallery = {
 }
 
 function updateGallery(galleryObject, pictureName, newValue ) {
-  if(pictureName in galleryObject) {
     galleryObject[pictureName] = newValue;
-  } else{
-    galleryObject.pictureName = newValue;
-  }
 }
 
