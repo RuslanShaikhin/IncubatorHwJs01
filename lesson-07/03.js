@@ -9,15 +9,14 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
-function truncate(str, maxLength) {
-  // your code
-  if(str.length > maxLength) {
-    str = str.slice(0, maxLength);
-    str+= '...';
-    return str;
-  } else {
+const truncate =(str,maxLength)=> {
+  let result = '';
+  if(str.length>maxLength) {
+    result += str.slice(0,maxLength);
+    return result+'...';
+  } else{
     return str;
   }
 }
 
-
+console.log(truncate("Короткая строка", 20));
