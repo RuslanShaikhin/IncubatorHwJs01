@@ -24,9 +24,7 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
 const callback = (element, index)=>{
-  if(element === true) {
-    return element;
-  }
+  return element % 2 !== 0;
 }
 
 const filter = (array, callback) => {
