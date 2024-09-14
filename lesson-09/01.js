@@ -32,7 +32,7 @@ const callback = (element, index) => {
 const filter = (array, func) => {
   const result = [];
   for (let i = 0; i < array.length; i++) {
-    if(func(array[i])) {
+    if(func(array[i], i)) {
       result.push(array[i]);
     }
   }
