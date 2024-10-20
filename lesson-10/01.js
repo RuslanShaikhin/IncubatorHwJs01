@@ -30,6 +30,10 @@ const model = {
     view.renderMovies(this.movies)
   },
   // your code
+  deleteMovie(movieId) {
+    this.movies = this.movies.filter(movie=> movie.id !== movieId);
+    view.renderMovies(this.movies);
+  }
 }
 
 const view = {
@@ -48,9 +52,21 @@ const view = {
 
       inputTitle.value = ''
       inputDescription.value = ''
+
+    })
+
+    const list = document.querySelector(".list");
+
+    list.addEventListener("click", function(event) {
+      if(event.target.classList.contains("delete-button")) {
+        const movieId = +event.target.parentElement.id;
+        controller.deleteMovie(movieId);
+      }
     })
 
     // your code
+    
+
   },
   renderMovies(movies) {
     const list = document.querySelector('.list')
@@ -91,6 +107,9 @@ const controller = {
     }
   },
   // your code
+  deleteMovie(movieId) {
+    model.deleteMovie(movieId);
+  }
 }
 
 function init() {
